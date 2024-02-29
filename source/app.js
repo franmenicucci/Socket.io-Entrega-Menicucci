@@ -13,7 +13,7 @@ const httpServer = http.createServer(app);
 const socketServer = new Server(httpServer);
 const PORT = 8080;
 
-const __filename = fileURLToPath(import.meta.url);
+const __filename = require('path').basename(__filename);
 const __dirname = dirname(__filename);
 
 let products = []; // Inicializar la variable 'products'
